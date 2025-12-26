@@ -1,0 +1,33 @@
+root = true
+
+# C# files
+[*.cs]
+indent_size = 4
+indent_style = space
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# TypeScript/JavaScript files
+[*.{ts,js,json}]
+indent_size = 2
+indent_style = space
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# HTML files
+[*.html]
+indent_size = 2
+indent_style = space
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# CSS files
+[*.{css,scss}]
+indent_size = 2
+indent_style = space
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true

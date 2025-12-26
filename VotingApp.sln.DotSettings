@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wpf:ResourceDictionary xml:space="preserve"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:s="clr-namespace:System;assembly=mscorlib"
+  xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml"
+  xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  
+  <!-- Code Style Settings for Visual Studio -->
+  
+  <!-- C# Code Style -->
+  <s:Boolean x:Key="/Default/CodeStyle/CodeCleanup/CleanupCode/@EntryValue">True</s:Boolean>
+  
+  <!-- Line Length -->
+  <s:Int32 x:Key="/Default/CodeStyle/CodeCleanup/Reformat/@EntryValue">1</s:Int32>
+  
+  <!-- Use var -->
+  <s:Boolean x:Key="/Default/CodeStyle/CSharpUsing/PreferSimpleUsing/@EntryValue">True</s:Boolean>
+  
+  <!-- Use file-scoped namespaces -->
+  <s:Boolean x:Key="/Default/CodeStyle/CSharpFileLayoutPatterns/UseFileScopedNamespaces/@EntryValue">True</s:Boolean>
+  
+  <!-- Indentation -->
+  <s:String x:Key="/Default/CodeStyle/CSharpIndentStyle/@EntryValue">Block</s:String>
+  
+  <!-- Line Endings -->
+  <s:String x:Key="/Default/CodeStyle/LineEnding/@EntryValue">Unix</s:String>
+  
+</wpf:ResourceDictionary>

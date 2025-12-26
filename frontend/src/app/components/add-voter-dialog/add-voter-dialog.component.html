@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Add New Voter</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="form">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Voter Name</mat-label>
+      <input matInput formControlName="name" placeholder="Enter voter name" />
+      <mat-error *ngIf="form.get('name')?.hasError('required')">
+        Name is required
+      </mat-error>
+      <mat-error *ngIf="form.get('name')?.hasError('maxlength')">
+        Name must not exceed 255 characters
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onAdd()" [disabled]="!form.valid || isLoading">
+    {{ isLoading ? 'Adding...' : 'Add' }}
+  </button>
+</mat-dialog-actions>

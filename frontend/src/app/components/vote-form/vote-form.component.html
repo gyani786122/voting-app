@@ -1,0 +1,32 @@
+<form [formGroup]="voteForm" (ngSubmit)="submitVote()" class="vote-form">
+  <h2>Cast Your Vote</h2>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>I am...</mat-label>
+    <mat-select formControlName="voterId">
+      <mat-option *ngFor="let voter of voters" [value]="voter.id">
+        {{ voter.name }}
+        <span *ngIf="voter.hasVoted" class="voted-badge">(Already voted)</span>
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>I vote for...</mat-label>
+    <mat-select formControlName="candidateId">
+      <mat-option *ngFor="let candidate of candidates" [value]="candidate.id">
+        {{ candidate.name }} ({{ candidate.voteCount }} votes)
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="isSubmitDisabled()"
+    class="submit-button"
+  >
+    {{ isLoading ? 'Voting...' : 'Vote!' }}
+  </button>
+</form>

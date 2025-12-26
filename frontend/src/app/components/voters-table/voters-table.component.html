@@ -1,0 +1,33 @@
+<div class="voters-container">
+  <h2>Voters</h2>
+  <table mat-table [dataSource]="voters" class="voters-table">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Has Voted Column -->
+    <ng-container matColumnDef="hasVoted">
+      <th mat-header-cell *matHeaderCellDef>Has Voted</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-icon [color]="getVotedColor(element.hasVoted)">
+          {{ getVotedIcon(element.hasVoted) }}
+        </mat-icon>
+      </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element"></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <button mat-fab class="add-button" (click)="openAddDialog()" color="primary">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

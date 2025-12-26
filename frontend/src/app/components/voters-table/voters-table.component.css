@@ -1,0 +1,42 @@
+.voters-container {
+  position: relative;
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.voters-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid #ddd;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+mat-icon {
+  vertical-align: middle;
+}
+
+.add-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
